@@ -1,5 +1,7 @@
 <?php
 
+use strategie\piece\Cuisine;
+use strategie\piece\Salon;
 use strategie\RobotCuistot;
 use strategie\RobotMenager;
 use strategie\Roomba;
@@ -18,3 +20,10 @@ $robotCuistot = new RobotCuistot();
 $robotCuistot->effectuerTache();
 $roomba->effectuerTache();
 $robotMenager->effectuerTache();
+
+
+$salon = new Salon();
+$cuisine = new Cuisine();
+
+$salon->autoriser($roomba);
+$cuisine->autoriser($roomba);
