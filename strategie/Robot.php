@@ -8,6 +8,7 @@
 
 namespace strategie;
 
+use strategie\communication\CommunicationVocale;
 use strategie\tache\ITache;
 
 /**
@@ -21,6 +22,7 @@ abstract class Robot {
     
     public function __construct(ITache $tache) {
         $this->tache = $tache;
+        $this->communication = new CommunicationVocale();
     }
     
     public function effectuerTache() {
@@ -29,5 +31,9 @@ abstract class Robot {
     
     public function communiquer() {
         $this->communication->communiquer();
+    }
+    
+    public function arret() {
+        echo 'le robot s\'arrête et se met en veille';
     }
 }

@@ -32,5 +32,9 @@ class Humain {
         return 'Je regarde des vidéos de chatons';
     }
     
+    public function faireDodo():string {
+        return 'zzz zzz zzz';
+    }
+    
     
 }
